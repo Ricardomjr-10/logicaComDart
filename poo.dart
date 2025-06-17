@@ -10,5 +10,11 @@ class Carro {
   Carro(this.modelo);
 }
 
-Carro mercedes = Carro('mercedes');
-Carro gol = Carro('gol');
+void main() {
+  Carro mercedes = Carro('mercedes');
+  Carro gol = Carro('gol');
+
+  print(mercedes.modelo);
+  print(mercedes._segredo);
+  print(mercedes._valor);
+}
