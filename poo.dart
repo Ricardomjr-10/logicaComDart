@@ -19,6 +19,8 @@ void main() {
 
   mercedes._valor = 10;
 
+  print(gol.modelo);
+
   print(mercedes.modelo);
   print(mercedes._segredo);
   print(mercedes._valor);
