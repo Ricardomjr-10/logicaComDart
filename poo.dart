@@ -25,3 +25,19 @@ void main() {
 }
 
 // Herança, Pliformfismo e Abstração
+
+abstract class Pessoa {
+  String comunicar();
+}
+
+class PessoaET implements Pessoa {
+  String comunicar() {
+    return "Olá Mundo!";
+  }
+}
+
+class PessoaNaoET implements Pessoa {
+  String comunicar() {
+    return "Bom dia";
+  }
+}
