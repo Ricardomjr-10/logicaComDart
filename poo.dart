@@ -22,10 +22,13 @@ void main() {
   print(mercedes.modelo);
   print(mercedes._segredo);
   print(mercedes._valor);
+
+  Deivid deivid = Deivid();
+  print(deivid.falar());
 }
 
 // Herança, Pliformfismo e Abstração
-
+//Abstracao
 abstract class Pessoa {
   String comunicar();
 }
@@ -39,5 +42,32 @@ class PessoaET implements Pessoa {
 class PessoaNaoET implements Pessoa {
   String comunicar() {
     return "Bom dia";
+  }
+}
+
+// Herança
+class Pai {
+  String falar() {
+    return "Papai";
+  }
+}
+
+class Deivid extends Pai {}
+
+//Polimorfismo
+
+abstract class Pagamento {
+  void pagar();
+}
+
+class PagarComBoleto implements Pagamento {
+  void pagar() {
+    print('Pagando com Boleto');
+  }
+}
+
+class PagarComPix implements Pagamento {
+  void pagar() {
+    print('Pagando com pix');
   }
 }
