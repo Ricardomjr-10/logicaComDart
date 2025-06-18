@@ -23,8 +23,23 @@ void main() {
   print(mercedes._segredo);
   print(mercedes._valor);
 
+  //abstração
+  Pessoa rafael = PessoaET();
+  print(rafael.comunicar());
+
+  Pessoa breno = PessoaNaoET();
+  print(breno.comunicar());
+
+  //Herança
   Deivid deivid = Deivid();
   print(deivid.falar());
+
+  //Polimorfismo
+  Pagamento pagamento = PagarComBoleto();
+  pagamento.pagar();
+
+  pagamento = PagarComPix();
+  pagamento.pagar();
 }
 
 // Herança, Pliformfismo e Abstração
