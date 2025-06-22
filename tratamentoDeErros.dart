@@ -23,6 +23,10 @@ void main() {
     login.logar();
   } on PassordLengthError catch (e) {
     print('Falhou ao logar $e');
+  } catch (e) {
+    print('outro erro');
+  } finally {
+    print('finalizou');
   }
 }
 
