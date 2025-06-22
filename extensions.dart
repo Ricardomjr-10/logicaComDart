@@ -7,13 +7,15 @@ void main() {
   print(nome.toFirstToUpperCase());
   print('rafael'.toFirstToUpperCase());
   print(EnumTest.enumValue.toValue());
+  print(EnumTest.enumNovo.toValue());
 }
 
-enum EnumTest { enumValue }
+enum EnumTest { enumValue, enumNovo }
 
 extension ExtensionsEnum on Enum {
   String toValue() {
-    return 'xpto';
+    Map map = {EnumTest.enumValue: 'xpto00', EnumTest.enumNovo: 'novoValor'};
+    return map[this];
   }
 }
 
