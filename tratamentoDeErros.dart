@@ -6,6 +6,12 @@ void main() {
     // capturar a falha
     print('printando o erro $e'); // pilha de erros
     //rethrow; // propagando o erro
-    throw Exception('Ocorreu um erro xpto'); //retornar um novo erro
+    //throw Exception('Ocorreu um erro xpto'); //retornar um novo erro
+    throw CustomError('error customizado');
   }
+}
+
+class CustomError implements Exception {
+  final String error;
+  CustomError(this.error);
 }
