@@ -3,6 +3,9 @@ void main() {
   exercicios.exer1(12, 8);
   exercicios.exer2(100, 90, 80);
   exercicios.exer3(250, 20);
+  exercicios.exer3(500, 15);
+  exercicios.exer3(1000, 10);
+  exercicios.exer3(2000, 5);
 }
 
 class Exercicios {
@@ -45,10 +48,40 @@ class Exercicios {
     if (salario <= 280) {
       int porcentagem = 20;
       double reajuste = (salario * porcentagem) / 100;
-      double novoSalario = salario + (salario + reajuste);
+      double novoSalario = salario + reajuste;
       print(
         'O salario era de $salario.'
-        'Sofreu um aumento de $porcentagem.'
+        'Sofreu um aumento de $porcentagem%.'
+        'Valor do aumento foi de $reajuste'
+        'Ficando com novo salario de $novoSalario',
+      );
+    } else if (salario > 280 && salario <= 700) {
+      int porcentagem = 15;
+      double reajuste = (salario * porcentagem) / 100;
+      double novoSalario = salario + reajuste;
+      print(
+        'O salario era de $salario.'
+        'Sofreu um aumento de $porcentagem%.'
+        'Valor do aumento foi de $reajuste'
+        'Ficando com novo salario de $novoSalario',
+      );
+    } else if (salario > 700 && salario < 1500) {
+      int porcentagem = 10;
+      double reajuste = (salario * porcentagem) / 100;
+      double novoSalario = salario + reajuste;
+      print(
+        'O salario era de $salario.'
+        'Sofreu um aumento de $porcentagem%.'
+        'Valor do aumento foi de $reajuste'
+        'Ficando com novo salario de $novoSalario',
+      );
+    } else if (salario >= 1500) {
+      int porcentagem = 5;
+      double reajuste = (salario * porcentagem) / 100;
+      double novoSalario = salario + reajuste;
+      print(
+        'O salario era de $salario.'
+        'Sofreu um aumento de $porcentagem%.'
         'Valor do aumento foi de $reajuste'
         'Ficando com novo salario de $novoSalario',
       );
